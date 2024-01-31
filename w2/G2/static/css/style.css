@@ -1,0 +1,10 @@
+/* By tag name */
+header {   
+    font-weight: bold;
+    color: aqua;
+}
+
+/* By class name */
+.description {
+    color: green;
+}
