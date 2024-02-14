@@ -1,0 +1,32 @@
+.container ul {
+  font-size: 30px;
+}
+
+.container table {
+  font-size: 30px;
+  border: 2px solid black;
+  margin-bottom: 40px;
+
+}
+
+.container table th,
+.container table td {
+  padding: 5px 10px;
+}
+
+.container fieldset {
+  font-size: 30px;
+}
+
+.container fieldset label {
+  margin-right: 10px;
+}
+
+.container fieldset input {
+  font-size: 30px;
+}
+
+.container fieldset button {
+  font-size: 30px;
+  margin-left: 5px;
+}

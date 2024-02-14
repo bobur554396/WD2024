@@ -1,0 +1,50 @@
+<div class="container">
+  <h1>{{ title }}</h1>
+
+  <ul>
+    <li *ngFor="let num of numbers">
+      {{num}}
+    </li>
+  </ul>
+
+  <h4 *ngIf="isOk">{{message}}</h4>
+  <button (click)="toggleMessage()">
+    Toggle message
+  </button>
+
+
+  <table border>
+    <thead>
+    <th>#</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>GPA</th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let student of students; let i = index;">
+      <td>{{i + 1}}</td>
+      <td>{{student.name}}</td>
+      <td>{{student.age}}</td>
+      <td>{{student.gpa}}</td>
+    </tr>
+    </tbody>
+  </table>
+  <br />
+
+  <fieldset>
+    <label for="display">Your text:</label>
+    <input type="text"
+           id="display"
+           [(ngModel)]="display">
+    <button (click)="addItem()">Add Item</button>
+  </fieldset>
+
+  <ul>
+    <li *ngFor="let i of items; let ind = index;">
+      {{i}}
+      <button (click)="removeItem(ind)">remove</button>
+    </li>
+  </ul>
+
+
+</div>
