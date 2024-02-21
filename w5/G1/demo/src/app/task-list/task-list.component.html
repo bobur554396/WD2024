@@ -1,0 +1,22 @@
+<fieldset>
+  <input type="text" [(ngModel)]="currentTask.name">
+  <button (click)="addTask()">Add Task</button>
+</fieldset>
+
+<h3>New tasks</h3>
+<ul *ngIf="newTasks.length; else newTaskEmpty">
+  <li *ngFor="let t of newTasks">
+    <app-task-item
+            [task]="t"
+            (remove)="onTaskItemRemove($event)"
+    ></app-task-item>
+  </li>
+</ul>
+<ng-template #newTaskEmpty>
+  <p>List is empty...</p>
+</ng-template>
+<!--<p *ngIf="newTasks.length === 0">List is empty...</p>-->
+
+
+<!--Input of component: [] - Sending data from parent to child-->
+<!--Output of component: () - Sending event from child to parent-->
