@@ -1,0 +1,7 @@
+<div>
+  <ul>
+    <li *ngFor="let p of posts">
+      <a [routerLink]="['/posts', p.id]">{{p.id}} - {{p.title}}</a>
+    </li>
+  </ul>
+</div>

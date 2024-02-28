@@ -1,0 +1,10 @@
+<ul *ngIf="loaded; else loading">
+  <li *ngFor="let post of posts">
+    <a [routerLink]="['/posts', post.id]">{{post.id}} - {{post.title}}</a>
+    <button (click)="deletePost(post.id)">x</button>
+  </li>
+</ul>
+
+<ng-template #loading>
+  <p>Posts are loading...</p>
+</ng-template>
