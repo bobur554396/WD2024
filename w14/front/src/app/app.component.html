@@ -1,0 +1,32 @@
+<h1>{{title}}</h1>
+
+
+<ng-container *ngIf="!logged">
+  <h3>Login form</h3>
+  <fieldset>
+    <label for="username">Username: </label>
+    <input type="text" id="username" [(ngModel)]="username">
+  </fieldset>
+  <fieldset>
+    <label for="password">Password: </label>
+    <input type="password" id="password" [(ngModel)]="password">
+  </fieldset>
+  <button (click)="login()">Login</button>
+</ng-container>
+
+
+<ng-container *ngIf="logged">
+  <button (click)="logout()">Logout</button>
+  <h3>Categories</h3>
+
+  <fieldset>
+    <input type="text" [(ngModel)]="newCategory">
+    <button (click)="addCategory()">Add category</button>
+  </fieldset>
+
+  <ul>
+    <li *ngFor="let c of categories">
+      {{c.id}} - {{c.name}}
+    </li>
+  </ul>
+</ng-container>
